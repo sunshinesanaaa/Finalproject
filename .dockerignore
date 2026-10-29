@@ -1,0 +1,7 @@
+.git
+.gitignore
+.freebuff
+*.zip
+Salevision_Session_Backup.txt
+*.log
+**/*.log

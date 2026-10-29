@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: golden-glow
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SALEVISION_DB_HOST
+        sync: false
+      - key: SALEVISION_DB_PORT
+        sync: false
+      - key: SALEVISION_DB_NAME
+        sync: false
+      - key: SALEVISION_DB_USER
+        sync: false
+      - key: SALEVISION_DB_PASSWORD
+        sync: false
+      - key: SALEVISION_DB_SSL_CA
+        sync: false

@@ -1,0 +1,14 @@
+# The PHP storefront is the live site; the leftover static .html pages are
+# served by their PHP handlers instead. Internal rewrites are used (rather than
+# redirects) so this works whether the app is at the domain root or in a
+# subdirectory, with no RewriteBase to adjust.
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteRule ^index\.html$ index.php [L]
+RewriteRule ^shop\.html$ shop.php [L]
+RewriteRule ^product\.html$ product.php [L,QSA]
+RewriteRule ^cart\.html$ cart.php [L]
+RewriteRule ^checkout\.html$ checkout.php [L]
+RewriteRule ^login\.html$ login.php [L]
+RewriteRule ^admin\.html$ admin.php [L]
